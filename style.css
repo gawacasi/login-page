@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+*{
+    box-sizing: border-box;
+
+}
+
+html,body, .wrapper{
+    height: 100%;   
+}
+
+body{
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 24px;
+    background-image: url("background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Ubuntu";
+    color: #000;
+    animation: rotate 6s infinite alternate linear;
+}
+
+.container{
+    position:relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 50px 25px 40px;
+    border-radius: 1.3rem;
+    background: #fff;
+    text-align: center;
+}
+
+.container > h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+.container > h3{
+    color: rgba( 0, 0, 0, 0.4);
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.login{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.login > input, .login > button{
+    width: 100%;
+    height: 50px;
+}
+
+.login > input {
+    border: 1px solid #ebebeb;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 0 18px;
+    border-radius: 1.1rem;
+    transition: all 0.3s;
+}
+
+.login > input:hover{
+    border: 2px solid rgb(255, 102, 0);
+}
+
+.login > button{
+    cursor: pointer;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 1rem;
+    background: rgb(0, 18, 32);
+    color: rgb(241, 157, 101);
+    border: 0;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.login >button:hover{
+    background: rgb(2, 43, 75);
+}
+
+.login > a{
+    color: rgb(241, 157, 101);
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: all 0.3s;
+}
+
+.login > a:hover{
+    color: red;
+}
+
+@keyframes rotate{
+    100%{
+        background-position: 15% 50%;
+    }
+}
+
+@media (width >= 500px){
+    body{
+        padding:0;
+    }
+
+    .container{
+        margin: 0;
+        width: 500px;
+    }
+}
